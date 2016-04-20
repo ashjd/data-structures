@@ -4,16 +4,16 @@ var Stack = function() {
   // Use an object with numeric keys to store values
   var storage = {};
 
+
   // Implement the methods below
   someInstance.push = function(value) {
     storage[someInstance.size()] = value;
   };
 
   someInstance.pop = function() {
-    var i = someInstance.size() - 1;
-    var value = storage[i];
-    delete storage[i];
-    return value;
+    var popped = storage[someInstance.size() - 1];
+    delete storage[someInstance.size() - 1];
+    return popped;
   };
 
   someInstance.size = function() {
