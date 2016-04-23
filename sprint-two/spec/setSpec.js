@@ -24,11 +24,28 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
-  it('should not add already existing value to a set', function(){
+  it('should not add already existing value to a set', function() {
     set.add('Mel Gibson');
     expect(set.length()).to.equal(1);
     set.add('Mel Gibson');
     expect(set.length()).to.equal(1);
+  });
+
+  it('should handle numbers', function() {
+    set.add(1);
+    expect(set.contains(1)).to.equal(true);
+  });
+
+  it('should handle arrays', function() {
+    var arr = [1, 2, 3];
+    set.add(arr);
+    expect(set.contains(arr)).to.equal(true);
+  });
+
+  it('should handle objects', function() {
+    var obj = {'a': 1};
+    set.add(obj);
+    expect(set.contains(obj)).to.equal(true);
   });
 
 });
