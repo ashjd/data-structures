@@ -51,5 +51,15 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should contain a non-number value that was added', function() {
+    var obj = {'x': 10};
+    linkedList.addToTail('hello');
+    linkedList.addToTail(obj);
+    expect(linkedList.contains('hello')).to.equal(true);
+    expect(linkedList.contains(obj)).to.equal(true);
+    expect(linkedList.contains(6)).to.equal(false);
+  });
+
+
   // add more tests here to test the functionality of linkedList
 });
