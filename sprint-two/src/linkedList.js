@@ -11,7 +11,6 @@ var LinkedList = function() {
    * Time Complexity: O(1)
    *
    * @param value
-   * @return undefined
    */
   list.addToTail = function(value) {
     var newNode = Node(value);
