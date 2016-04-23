@@ -8,7 +8,6 @@ describe('tree', function() {
   it('should have methods named "addChild", "contains", "removeFromParent" and "traverse", and a property named "value"', function() {
     expect(tree.addChild).to.be.a('function');
     expect(tree.contains).to.be.a('function');
-    debugger;
     expect(tree.removeFromParent).to.be.a('function');
     expect(tree.traverse).to.be.a('function');
     expect(tree.hasOwnProperty('value')).to.equal(true);
