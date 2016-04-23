@@ -8,6 +8,7 @@ var LinkedList = function() {
 
   /**
    * Adds a value (as a Node) to the end of a linked list
+   * Time Complexity: O(1)
    *
    * @param value
    * @return undefined
@@ -31,6 +32,7 @@ var LinkedList = function() {
 
   /**
    * Removes the Node at the beginning of the list
+   * Time Complexity: O(1)
    *
    * @return value
    */
@@ -42,6 +44,7 @@ var LinkedList = function() {
 
   /**
    * Check if list contains a target value
+   * Time Complexity: O(n)
    *
    * @param target
    * @return {boolean}
@@ -74,7 +77,3 @@ var Node = function(value) {
 
   return node;
 };
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */
